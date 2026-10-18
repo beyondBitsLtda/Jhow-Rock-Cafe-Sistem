@@ -105,7 +105,9 @@ COMO COMEÇAR
 ------------
 1. Abra o arquivo index.html no navegador (Edge ou Chrome). Não precisa
    instalar nada.
-2. Na primeira vez o sistema abre com clientes de exemplo (fictícios).
+2. O sistema abre direto no CAIXA, que é o que se faz na planilha no dia
+   a dia: achar o cliente e lançar a compra. Na primeira vez ele vem com
+   clientes de exemplo (fictícios).
 3. Para usar com os clientes reais: Ajustes → "Trazer a planilha" →
    escolher o arquivo Jhow Cashback.xlsx. A leitura é feita no próprio
    computador e nada é enviado para a internet.

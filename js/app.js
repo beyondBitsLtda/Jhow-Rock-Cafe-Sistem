@@ -18,11 +18,11 @@
   ];
   const MORE = ["numeros", "campanhas", "biblioteca", "ajustes"];
 
-  let current = "palco", params = [];
+  let current = "caixa", params = [];
   // rota interna: a navegação não depende de clicar em links, então nada abre em outra aba
   const fromHash = () => { try { return decodeURIComponent((location.hash || "").replace(/^#/, "")); } catch (e) { return ""; } };
-  let route = fromHash() || "palco";
-  const parse = () => { const [v, ...p] = route.split("/"); return { v: JR.views[v] ? v : "palco", p }; };
+  let route = fromHash() || "caixa"; // abre no caixa: a mesma ação que o Jhow faz na planilha
+  const parse = () => { const [v, ...p] = route.split("/"); return { v: JR.views[v] ? v : "caixa", p }; };
   const syncUrl = (r, replace) => { try { history[replace ? "replaceState" : "pushState"](null, "", "#" + r); } catch (e) { /* visualizador pode bloquear: a rota interna segue valendo */ } };
   JR.setRoute = (r) => { route = r; syncUrl(r, true); };
 
@@ -106,7 +106,7 @@
       e.preventDefault();
       const r = a.getAttribute("href").slice(1); if (r) JR.go(r);
     }, true);
-    window.addEventListener("popstate", () => { route = fromHash() || "palco"; JR.closeAllDrawers(); render(false); });
+    window.addEventListener("popstate", () => { route = fromHash() || "caixa"; JR.closeAllDrawers(); render(false); });
     window.addEventListener("hashchange", () => { const h = fromHash(); if (h && h !== route) { route = h; JR.closeAllDrawers(); render(false); } });
     // sem zoom por gesto: pinça no celular (iOS ignora user-scalable) e pinça do trackpad (ctrl + roda)
     ["gesturestart", "gesturechange"].forEach((t) => document.addEventListener(t, (e) => e.preventDefault(), { passive: false }));

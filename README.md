@@ -7,7 +7,7 @@ Funciona no computador e no celular, sem instalar nada: é só abrir o `index.ht
 ## Como usar
 
 1. Abra `index.html` com duplo clique.
-2. Na primeira vez, o sistema abre com **dados de exemplo**. Os clientes são fictícios, mas seguem o perfil real da planilha.
+2. O sistema abre direto no **Caixa**, a mesma ação que o Jhow faz na planilha: achar o cliente e lançar a compra. Na primeira vez, ele vem com **dados de exemplo**. Os clientes são fictícios, mas seguem o perfil real da planilha.
 3. Para usar com os dados de verdade, vá em **Ajustes → Trazer a planilha** e escolha o arquivo `Jhow Cashback.xlsx`. A leitura acontece no próprio navegador e nada sai do computador.
 4. Faça **backup semanal** em Ajustes → Baixar backup.
 
