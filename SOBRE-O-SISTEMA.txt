@@ -1,0 +1,141 @@
+JHOW ROCK CAFÉ — BACKSTAGE
+Sistema de operação do café
+==========================================================================
+
+O QUE É
+-------
+O Backstage é o sistema que substitui a planilha "Jhow Cashback.xlsx" no
+dia a dia do Jhow Rock Café. Tudo o que hoje é controlado à mão na planilha
+(cadastro de clientes, compras, cashback, resgates, indicadores, campanhas e
+biblioteca) passa a ser feito em telas simples, no computador do caixa ou no
+celular.
+
+O objetivo é deixar a operação mais rápida e com menos erro: o sistema faz
+as contas sozinho, avisa quem está fazendo aniversário ou sumindo, e monta
+os números do mês sem ninguém precisar digitar fórmula.
+
+O visual segue a identidade do café: fundo preto, o selo do Jhow e
+elementos de rock e café (guitarra, amplificador, vinil, xícara, setlist,
+ingresso de show).
+
+
+O QUE O SISTEMA FAZ
+-------------------
+
+1. PALCO (painel do dia)
+   - Quanto o caixa vendeu hoje, quantas visitas, cashback gerado e usado.
+   - "Volume do caixa": um knob de amplificador que compara o dia com a
+     média dos últimos 30 dias (5 = dia normal, 11 = dia de recorde).
+   - Setlist do dia: lista das vendas na ordem em que foram lançadas.
+   - Aniversariantes da semana, clientes sumindo que ainda têm saldo e
+     livros com devolução atrasada.
+
+2. CAIXA (lançar venda)
+   - Busca o cliente pelo nome ou telefone.
+   - Digita o valor da conta e, se o cliente quiser, usa o cashback.
+   - O sistema mostra na hora quanto ele paga, quanto ganhou de cashback e
+     o saldo novo.
+   - No fim aparece um comprovante em forma de ingresso de show, com botão
+     para mandar a mensagem pelo WhatsApp.
+   - Venda lançada errado pode ser estornada.
+
+3. CLIENTES
+   - Lista de todos os clientes, com busca e filtros: ativos, mornos,
+     afastados, sumidos, lendas, com saldo e aniversariantes do mês.
+   - Ficha completa de cada cliente: saldo, consumo total, ticket médio,
+     número de visitas, aniversário, profissão, anotações e histórico de
+     todas as compras e resgates.
+   - Cadastro e edição de clientes, com aviso de telefone repetido.
+
+4. FÃ-CLUBE (relacionamento)
+   - Aniversariantes de hoje, da semana e do mês.
+   - "Pedindo bis": clientes que estão sumindo mas ainda têm cashback.
+   - "Saldo parado": clientes ativos com saldo acumulado para usar.
+   - "Lendas da casa": os maiores fãs por consumo.
+   - Cada lista tem botão de WhatsApp com mensagem pronta e marca quem já
+     recebeu contato.
+
+5. NÚMEROS (antiga aba Mkt)
+   - Novos cadastros, visitas, consumo, ticket médio, cashback gerado e
+     resgatado, por mês, trimestre, ano ou desde o início.
+   - Frequência dos clientes (1x, 2x, 3x, 4–5x, 6x+), situação da base
+     (ativos, mornos, afastados, sumidos), sexo, faixa etária e profissões.
+   - Tabela mensal com subtotais por trimestre, no mesmo formato da
+     planilha.
+   - Só três números são lançados à mão: faturamento total da loja,
+     vouchers de aniversário e alimentação interna.
+
+6. CAMPANHAS (antiga aba Camp)
+   - Avaliações no Google e seguidores no Instagram, mês a mês, comparados
+     com os concorrentes.
+   - Banco de ideias em três colunas: Ideias, Ensaiando e No palco.
+
+7. BIBLIOTECA (antiga aba Livro)
+   - Acervo do clube do livro (1.017 títulos), com busca por título, autor
+     ou leitor.
+   - Empréstimo para um cliente cadastrado ou para qualquer pessoa,
+     devolução, prazo e aviso de atraso.
+   - Ranking dos livros mais lidos.
+
+8. AJUSTES
+   - Porcentagem de cashback, resgate mínimo e regra das visitas com
+     resgate.
+   - Quantos dias definem cliente ativo, morno, afastado ou sumido.
+   - Textos das mensagens de WhatsApp.
+   - Importar a planilha atual, fazer backup e restaurar backup.
+
+
+REGRAS DO CASHBACK (iguais às da planilha)
+------------------------------------------
+- O cliente ganha 8% do valor da compra em cashback (na planilha:
+  total ÷ 12,5).
+- A visita em que o cliente usa o cashback não gera cashback novo. Essa
+  regra pode ser mudada em Ajustes.
+- Saldo = tudo o que ganhou − tudo o que já usou.
+- Situação do cliente pela última visita:
+    Ativo    = veio nos últimos 90 dias
+    Morno    = de 91 a 180 dias sem vir
+    Afastado = de 181 a 270 dias sem vir
+    Sumido   = mais de 270 dias sem vir
+- Nível de fã pelo número de visitas:
+    Estreante (1) · Groupie (2 a 3) · Fã (4 a 5) · Lenda (6 ou mais)
+
+
+COMO COMEÇAR
+------------
+1. Abra o arquivo index.html no navegador (Edge ou Chrome). Não precisa
+   instalar nada.
+2. Na primeira vez o sistema abre com clientes de exemplo (fictícios).
+3. Para usar com os clientes reais: Ajustes → "Trazer a planilha" →
+   escolher o arquivo Jhow Cashback.xlsx. A leitura é feita no próprio
+   computador e nada é enviado para a internet.
+4. Faça backup toda semana em Ajustes → "Baixar backup".
+
+A importação foi testada com a planilha real e confere com ela:
+4.301 clientes, R$ 19.900,00 resgatados, R$ 36,7 mil de cashback em aberto
+e R$ 757,7 mil de consumo total.
+
+
+O QUE AINDA NÃO FAZ (próximos passos)
+-------------------------------------
+- Os dados ficam no navegador do aparelho onde o sistema foi aberto. O
+  computador do caixa e o celular não compartilham a mesma base. Para isso
+  é preciso colocar o sistema em um servidor com banco de dados na nuvem.
+- Não tem login nem senha por usuário.
+- O botão de WhatsApp abre a conversa com a mensagem pronta, mas o envio é
+  feito pela pessoa.
+
+
+PRIVACIDADE (LGPD)
+------------------
+O sistema guarda nome, telefone e data de nascimento dos clientes. Esses
+dados devem ser usados só para o programa de fidelidade e relacionamento
+do café. O arquivo de backup e a planilha não devem ser compartilhados, e
+o cadastro de quem pedir para sair deve ser excluído (ficha do cliente →
+Excluir cliente).
+
+
+CRÉDITOS
+--------
+Fotos: Unsplash (licença livre para uso comercial). Ilustrações, ícones e
+selo adaptados para o Jhow Rock Café.
